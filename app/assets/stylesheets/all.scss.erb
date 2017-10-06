@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+$a-tags: 'a:link, a:visited';
+$a-tags-hover: 'a:active, a:hover';
+
+/* SPALVOS */
+$dark1: #354568;
+$dark2: #0c98bb;
+$bold: #c3e8f4;
+$light1: #74ddd9;
+$light2: #caf5ef;
+$neutral: #e5e5e5;
+$standout: #ffc4ac;
+
+@mixin links ($link, $visited, $hover, $active) {
+    & {
+        color: $link;
+        &:visited {
+            color: $visited;
+        }
+        &:hover {
+            color: $hover;
+        }
+        &:active, &:focus {
+            color: $active;
+        }
+    }
+}

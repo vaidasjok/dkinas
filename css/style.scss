@@ -1,0 +1,53 @@
+
+@mixin links ($link, $visited, $hover, $active) {
+    & {
+        color: $link;
+        &:visited {
+            color: $visited;
+        }
+        &:hover {
+            color: $hover;
+        }
+        &:active, &:focus {
+            color: $active;
+        }
+    }
+}
+body {
+  /*background-image: url("../images/bg.png");
+  background-position: 10% 0%;
+  font-family: calibri;*/
+}
+
+
+.container {
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  max-width: 960px;
+  p {
+    //text-align: justify;
+  }
+}
+#construction {
+  margin-bottom: 2.5em;
+}
+#logo > img {
+  width: 200px;
+  max-width: 100%;
+}
+#logo {
+  margin-bottom: 2em;
+}
+.facebook a {
+  text-decoration: none;
+  color: #c5c5c5;
+  font-size: 2em;
+  @include links(#370057, #370057, #A60004, #370057);
+}
+footer {
+  margin-top: 4em;
+  p {
+    text-align: center!important;
+  }
+}
